@@ -1,0 +1,24 @@
+name:                bupsplit
+version:             0.0.0
+Cabal-Version:       >= 1.8
+synopsis:            Bup rolling checksum.
+description:         An implementation of the rolling checksum used in Bup.
+category:            Network
+license:             BSD3
+license-file:        LICENSE
+author:              Vo Minh Thu
+maintainer:          thu@hypered.io
+build-type:          Simple
+homepage:            https://github.com/noteed/bupsplit
+
+source-repository head
+  type: git
+  location: git://github.com/noteed/bupsplit.git
+
+executable bupsplit
+  hs-source-dirs:      bin
+  main-is:             bupsplit.hs
+  build-depends:       base == 4.*,
+                       bytestring == 0.9.*
+  ghc-options:         -Wall
+                       -O2
